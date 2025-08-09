@@ -178,7 +178,7 @@
                 
                 projectRows.forEach((project, index) => {
                     const projectCategory = project.querySelector('.project-category').textContent;
-                    const shouldShow = activeCategories.length === 0 || activeCategories.includes(projectCategory);
+                    const shouldShow = activeCategories.length > 0 && activeCategories.includes(projectCategory);
                     const isCurrentlyVisible = !project.classList.contains('hidden');
                     
                     if (shouldShow && !isCurrentlyVisible) {
