@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--    
+        TODO Fix issues with project
+        information text showing when not hovered
+
+        Bug when spamming refresh the page automatically scrolls to the bottom
+    -->
+
+
+        <h1>
+            <span class="slide-left">Software</span>
+            <span class="slide-right">Engineering</span>
+            <span class="slide-left">Student</span>
+        </h1>
+        <section id="home">
+        <div class="top-bar fade-in-section">
+            <div class="nav-links">
+                <a href="#home">About me</a>
+                <a href="#about">Skills</a>
+                <a href="#projects">Projects</a>
+            </div>
+        </div>
+        <div class="fade-in-section">
+            <h2>About me</h2>
+            <div class="about-container">
+                <p>
+                Hi, my name is Valtteri, I am a 22-year-old student. Currently I
+              am studying
+              Information Technology at Tampere University. I'm
+              interested in
+              programming and have experience with languages
+              including C++,
+              Python, HTML, CSS, JavaScript and MySQL. Please feel free
+              to check out my
+              projects below 
+            </p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="fade-in-section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <span>C++</span>
+            </div>
+            <div class="skill-item">
+                <span>Python</span>
+            </div>
+            <div class="skill-item">
+                <span>MySQL</span>
+            </div>
+            <div class="skill-item">
+                <span>Java</span>
+            </div>
+            <div class="skill-item">
+                <span>JavaScript</span>
+            </div>
+                
+            <div class="skill-item">
+                <span>Git</span>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="fade-in-section">
+        <h2>Projects</h2>
+        <div class="project-filters">
+            <button class="select-all-btn" id="selectAllBtn">Deselect All</button>
+            <button class="filter-btn active" data-category="C++">C++</button>
+            <button class="filter-btn active" data-category="JavaScript">JavaScript</button>
+            <button class="filter-btn active" data-category="Python">Python</button>
+        </div>
+        <div class="projects-list">
+
+            <a class="project-row" href="https://github.com/valtteriSut/Tammi-peli">
+                <div class="project-image">
+                    <img src="images/checkers.jpg" alt="Checkers">
+                </div>
+                <div class="project-content">
+                    <p class="project-category">C++</p>
+                    <h3 class="project-title">Checkers</h3>
+                    <p class="project-description">A classic checkers game implemented in C++ with game logic and AI</p>
+                </div>
+            </a>
+
+            <a class="project-row" href="https://github.com/valtteriSut/Teatteri-tiedoston-haku-ohjelma">
+                <div class="project-image">
+                    <img src="images/theatre.jpg" alt="Theatre search">
+                </div>
+                <div class="project-content">
+                    <p class="project-category">C++</p>
+                    <h3 class="project-title">Theatre search</h3>
+                    <p class="project-description">A C++ application for searching and managing theatre information from files</p>
+                </div>
+            </a>
+
+            <a class="project-row" href="https://food-scroller.vercel.app/">
+                <div class="project-image">
+                    <img src="images/burger.jpg" alt="Food image scroller">
+                </div>
+                <div class="project-content">
+                    <p class="project-category">JavaScript</p>
+                    <h3 class="project-title">Food image scroller</h3>
+                    <p class="project-description">An interactive image scroller showcasing food photography. Site is hosted on Vercel</p>
+                </div>
+            </a>
+
+            <a class="project-row" href="https://weather-blush-omega-38.vercel.app/">
+                <div class="project-image">
+                    <img src="images/weather.jpg" alt="Weather app">
+                </div>
+                <div class="project-content">
+                    <p class="project-category">JavaScript</p>
+                    <h3 class="project-title">Weather app</h3>
+                    <p class="project-description">A web application that displays weather information using API integration. Site is hosted on Vercel</p>
+                </div>
+            </a>
+
+
+
+            <a class="project-row" href="https://github.com/valtteriSut/TicTacToe">
+                <div class="project-image">
+                    <img src="images/tictactoe.jpg" alt="Tic-tac-toe game">
+                </div>
+                <div class="project-content">
+                    <p class="project-category">Python</p>
+                    <h3 class="project-title">Tic-tac-toe game</h3>
+                    <p class="project-description">A Python implementation of the classic tic-tac-toe game with console interface</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
