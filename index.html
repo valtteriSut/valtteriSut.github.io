@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="stars" id="stars"></div>
+ 
+<nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#technologies">Technologies</a></li>
+    <li><a href="#projects">Projects</a></li>
+  </ul>
+  <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">☾</button>
+</nav>
+
+<section class="hero" id="hero">
+  <h1><span id="hero-typed"></span><span class="cursor"></span></h1>
+</section>
+
+<section class="section" id="about">
+  <div class="about-wrapper">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-card">
+      <p class="about-text">                 Hi, my name is Valtteri, I am a 23-year-old student. Currently I
+              am studying Master's degree in
+              Information Technology at Tampere University. I'm
+              interested in
+              programming and have experience with languages
+              including C++,
+              Python, HTML, CSS, JavaScript and MySQL. Please feel free
+              to check out my
+              projects below </p>
+      <div class="about-links">
+        <a href="https://github.com" target="_blank" class="about-link">GitHub ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="technologies">
+  <h2 class="section-title">Technologies</h2>
+  <div class="tech-grid">
+    <div class="tech-item cpp">C++</div>
+    <div class="tech-item java">Java</div>
+    <div class="tech-item python">Python</div>
+    <div class="tech-item mongodb">MongoDB</div>
+    <div class="tech-item mysql">MySQL</div>
+    <div class="tech-item javascript">JavaScript</div>
+    <div class="tech-item git">Git</div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="JavaScript">JavaScript</button>
+    <button class="filter-btn" data-filter="Python">Python</button>
+    <button class="filter-btn" data-filter="Java">Java</button>
+    <button class="filter-btn" data-filter="C++">C++</button>
+  </div>
+<a class="project-link" href="https://github.com/valtteriSut/Tammi-peli">
+  <div class="projects-grid">
+    <div class="project-card" data-tags="C++">
+      <h3>Checkers</h3>
+      <p>A classic checkers game implemented in C++ with game logic and AI</p>
+      <div class="project-tags">
+        <span class="project-tag C++">C++</span>
+      </div>
+    </div>
+</a>
+   <a class="project-link" href="https://weather-blush-omega-38.vercel.app/">
+    <div class="project-card" data-tags="JavaScript">
+      <h3>Weather app</h3>
+      <p>A web application that displays weather information using API integration. Site is hosted on Vercel</p>
+      <div class="project-tags">
+        <span class="project-tag javascript">JavaScript</span>
+      </div>
+    </div>
+</a>
+      <a class="project-link" href="https://github.com/valtteriSut/TicTacToe">
+    <div class="project-card" data-tags="Python">
+      <h3>Tic-tac-toe game</h3>
+      <p>A Python implementation of the classic tic-tac-toe game with console interface</p>
+      <div class="project-tags">
+        <span class="project-tag python">Python</span>
+      </div>
+      </div>
+        </a>
+    <a class="project-link" href="https://github.com/valtteriSut/Teatteri-tiedoston-haku-ohjelma">
+    <div class="project-card" data-tags="C++">
+      <h3>Theatre search</h3>
+      <p>A C++ application for searching and managing theatre information from files</p>
+      <div class="project-tags">
+        <span class="project-tag C++">C++</span>
+      </div>
+    </div>
+  <a class="project-link" href="https://food-scroller.vercel.app/">
+    <div class="project-card" data-tags="JavaScript">
+      <h3>Food image scroller</h3>
+      <p>An interactive image scroller showcasing food photography. Site is hosted on Vercel</p>
+      <div class="project-tags">
+        <span class="project-tag javascript">JavaScript</span>
+      </div>
+    </div>
+  </a>
+  <a class="project-link" href="https://github.com/valtteriSut/blink-detector">
+    <div class="project-card" data-tags="Python">
+      <h3>Python webcam blink detector</h3>
+      <p>Detects via webcam when user blinks</p>
+      <div class="project-tags">
+        <span class="project-tag python">Python</span>
+      </div>
+    </div>
+  </a>
+</section>
+
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const btn = document.getElementById('themeBtn');
+  if (html.getAttribute('data-theme') === 'light') {
+    html.setAttribute('data-theme', 'dark');
+    btn.textContent = '☾';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    html.setAttribute('data-theme', 'light');
+    btn.textContent = '☀';
+    localStorage.setItem('theme', 'light');
+  }
+  document.getElementById('stars').innerHTML = '';
+  createStars();
+}
+
+const saved = localStorage.getItem('theme');
+if (saved === 'light') {
+  document.documentElement.setAttribute('data-theme', 'light');
+  document.getElementById('themeBtn').textContent = '☀';
+}
+
+function createStars() {
+  const starsContainer = document.getElementById('stars');
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  const starCount = 80;
+  
+  for (let i = 0; i < starCount; i++) {
+    const star = document.createElement('div');
+    star.className = 'star ' + (isLight ? 'dark' : 'light');
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.animationDelay = Math.random() * 3 + 's';
+    star.style.opacity = Math.random() * 0.5 + 0.3;
+    starsContainer.appendChild(star);
+  }
+}
+
+createStars();
+
+const heroText = 'Software Engineering Student';
+const heroTyped = document.getElementById('hero-typed');
+let heroCharIndex = 0;
+
+function typeHero() {
+  if (heroCharIndex < 9) {
+    heroTyped.textContent = heroText.substring(0, heroCharIndex + 1);
+    heroCharIndex++;
+    setTimeout(typeHero, 80 + Math.random() * 40);
+
+  } else if (heroCharIndex < 20) { 
+    const before = 'Software ';
+    const colored = heroText.substring(9, heroCharIndex + 1);
+    heroTyped.innerHTML = before + '<span class="highlight-engineer">' + colored + '</span>';
+    heroCharIndex++;
+    setTimeout(typeHero, 80 + Math.random() * 40);
+
+  } else if (heroCharIndex < heroText.length) {
+    const mainPart = 'Software <span class="highlight-engineer">Engineering</span>';
+    const rest = heroText.substring(20, heroCharIndex + 1);
+    heroTyped.innerHTML = mainPart + rest;
+    heroCharIndex++;
+    setTimeout(typeHero, 80 + Math.random() * 40);
+  }
+}
+
+typeHero();
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    const filter = btn.dataset.filter;
+document.querySelectorAll('.project-card').forEach(card => {
+  const wrapper = card.closest('.project-link'); 
+  
+  const isVisible = filter === 'all' || card.dataset.tags.includes(filter);
+  
+  wrapper.style.display = isVisible ? 'block' : 'none';
+});
+  });
+});
+</script>
+
+  </body>
+</html>
