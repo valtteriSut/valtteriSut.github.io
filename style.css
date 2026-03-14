@@ -129,6 +129,8 @@ body {
   margin: 0;
   padding: 0;
   gap: 10px;
+  backdrop-filter: blur(1px);
+
 }
 
 .nav-links a {
@@ -252,6 +254,8 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 24px;
   padding: 32px;
+  backdrop-filter: blur(1px);
+
 }
 
 [data-theme="light"] .about-card {
@@ -316,6 +320,8 @@ body {
   font-size: 0.95rem;
   transition: all 0.25s ease;
   color: var(--text-secondary);
+  backdrop-filter: blur(1px);
+
 }
 
 .tech-item:hover {
@@ -361,6 +367,8 @@ body {
   font-size: 0.85rem;
   font-weight: 500;
   transition: all 0.25s ease;
+  backdrop-filter: blur(1px);
+
 }
 
 .filter-btn:hover {
@@ -393,6 +401,8 @@ body {
   padding: 28px;
   transition: all 0.3s ease;
   min-height: 270px;
+  backdrop-filter: blur(1px);
+ 
 }
 
 .project-card:hover {
