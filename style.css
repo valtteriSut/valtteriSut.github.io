@@ -439,7 +439,7 @@ body {
   font-weight: 500;
 }
 
-.project-tag.cpp { border-color: rgba(90, 150, 220, 0.25); color: #5A9ADC; }
+.project-tag.cpp { border-color: rgba(50, 110, 180, 0.25); color: #3C72B4; }
 .project-tag.java { border-color: rgba(220, 110, 30, 0.25); color: #DC7626; }
 .project-tag.python { border-color: rgba(50, 110, 180, 0.25); color: #3C72B4; }
 .project-tag.mongodb { border-color: rgba(60, 140, 60, 0.25); color: #4C8C4C; }
@@ -447,7 +447,7 @@ body {
 .project-tag.javascript { border-color: rgba(200, 180, 40, 0.25); color: #C8B428; }
 .project-tag.git { border-color: rgba(200, 70, 50, 0.25); color: #C84632; }
 
-[data-theme="light"] .project-tag.cpp { color: #0055A4; }
+[data-theme="light"] .project-tag.cpp { color: #2A5A8A; }
 [data-theme="light"] .project-tag.java { color: #B5620E; }
 [data-theme="light"] .project-tag.python { color: #2A5A8A; }
 [data-theme="light"] .project-tag.mongodb { color: #2A6A2A; }
